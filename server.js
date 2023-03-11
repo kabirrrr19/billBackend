@@ -8,7 +8,7 @@ const routes = require('./routes/Router');
 
 const mongoose = require('mongoose');
 const dbUrl = require('./properties').DB_URL;
-const PORT = process.env.PORT || 4000 
+const PORT = process.env.PORT || 3000 
 
 
 
