@@ -8,7 +8,7 @@ const routes = require('./routes/Router');
 
 const mongoose = require('mongoose');
 const dbUrl = require('./properties').DB_URL;
-const PORT = 4000 
+const PORT = process.env.PORT || 4000 
 
 
 
@@ -27,13 +27,13 @@ mongoose
 
 
 
-const billModel = require('./models/bill.model');
+const billModel = require('./model/bill.model');
 
 const app = express();
 
 // view engine setup
-// app.set('views', path.join(__dirname, 'views'));
-// app.set('view engine', 'jade');
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'jade');
 
 app.use(logger('dev'));
 app.use(express.json());

@@ -1,17 +1,14 @@
 const express = require('express');
-const billModel = require('../models/bill.model');
+const billModel = require('../model/bill.model');
 const router = express.Router()
 
 router.get('/', function (req, res, next) {
-    res.render("index", {
-      title: "Bills Page",
-      message: "Welcome to the bills page",
-    });
+    res.send("Path to the Bills Page \n list -> to get all the bills \n add -> to add a partner \n remove -> delete a bill using UID")
 })
 
 router.get("/list", async function (req, res, next) {
   try {
-    const document = await billModel.findOne();
+    const document = await billModel.find();
     if (document) {
       res.send({
         status: 200,
