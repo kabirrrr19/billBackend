@@ -44,7 +44,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.get('/', function (req, res, next) {
   res.render("index", {
     title: "Home Page",
-    message: "Welcome to Home Page",
+    message: "Welcome to Home Page. \n Go to the /bills endpoint for further use",
   });
 })
 app.get("/data", function (req, res, next) {

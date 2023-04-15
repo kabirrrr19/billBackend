@@ -25,7 +25,7 @@ router.get("/list", async function (req, res, next) {
 router.post("/add", async (req, res, next) => {
   let newBill = new billModel({
     uid: req.body.uid,
-    created_at: new Date(0),
+    created_at: new Date(),
     credits: req.body.credits,
     duration: req.body.duration,
     execution_status: req.body.execution_status,

@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 
 const billSchema = mongoose.Schema({
   uid: { type: String, required:true },
-  created_at: { type: Date, required:true , default: new Date(0)},
+  created_at: { type: Date, required:true , default: new Date()},
   credits: { type: Number, required:true },
   duration: { type: Number, required:true },
   execution_status: { type: String, required:true },
